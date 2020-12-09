@@ -1,0 +1,52 @@
+$main-color: #007bff;
+$border-color: #bbb;
+$accept-color: green;
+$invalid-color: red;
+$incomplete-color: orange;
+$gap: 10px;
+
+.container {
+  height: 100%;
+}
+
+.title {
+  color: $main-color;
+  font-weight: 500;
+  height: 20px;
+}
+
+.gap {
+  padding-bottom: $gap;
+  border-bottom: 1px solid $border-color;
+}
+
+.assessment-container {
+  font-size: 14px;
+  height: calc(100% - 20px);
+  overflow: auto;
+  .assessment-card {
+    margin: $gap 0;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      .accept {
+        color: $accept-color;
+      }
+      .invalid {
+        color: $invalid-color;
+      }
+      .incomplete {
+        color: $incomplete-color;
+      }
+      .date {
+        color: gray;
+      }
+    }
+    .content {
+      margin: $gap 0;
+    }
+    .assignee {
+      color: gray;
+    }
+  }
+}

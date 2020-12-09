@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="title gap">
+    {{title}}
+  </div>
+  <div class="assessment-container">
+    <div *ngFor="let assessment of data" class="assessment-card gap">
+      <div class="header">
+        <span [ngClass]="assessment.state.toLowerCase()">
+          {{getStateText(assessment.state)}}
+        </span>
+        <span class="date">{{assessment.date}}</span>
+      </div>
+      <div class="content">
+        {{assessment.text}}
+      </div>
+      <div class="assignee">
+        {{assessment.assignee}}
+      </div>
+    </div>
+  </div>
+</div>
